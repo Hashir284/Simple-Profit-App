@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Jost', 'Inter', sans-serif;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    color: #e2e8f0;
+}
+
+input,
+button {
+    font-family: 'Jost', 'Inter', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1050px;
+}
+
+.totals {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.totals .amountdetails {
+    padding: 30px;
+    border-radius: 20px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    font-weight: 580;
+    font-size: 19px;
+}
+
+.totals1>div:nth-child(1) {
+    border-left: 5px solid #22c55e;
+}
+
+.totals1>div:nth-child(2) {
+    border-left: 5px solid #ef4444;
+}
+
+.totals2>div:nth-child(1) {
+    border-left: 5px solid #f59e0b;
+}
+
+.totals2>div:nth-child(2) {
+    border-left: 5px solid #3b82f6;
+}
+
+form {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    border: 1px solid #334155;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    margin-bottom: 40px;
+    font-weight: 500;
+    color: #cbd5e1;
+}
+
+form input {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    font-size: 18px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+form input[number]:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+form div.btndiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.btndiv {
+    padding: 3px;
+}
+
+form button {
+    padding: 18px 55px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 580;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+form button:nth-child(1) {
+    background: #22c55e;
+    color: white;
+    /* tra */
+}
+
+form button:nth-child(1):hover {
+    background: #22c55ecb;
+}
+
+form button:nth-child(2) {
+    background: #3b82f6;
+    color: white;
+}
+
+.title {
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+table {
+    font-family: "Nunito Sans", sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    background: #1e293b;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #334155;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+table thead {
+    background: #0f172a;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.th1, .td1 {
+    padding-left: 80px;
+    width: 500px;
+}
+
+.td1{
+    padding-left: 82px;
+}
+
+table th,
+table td {
+    padding: 20px;
+    text-align: left;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #334155;
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody td button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #e74d3ce1;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+tbody td button:hover {
+    background: #d63220;
+    transform: scale(1.03) translateY(-0px);
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color: green;
+}

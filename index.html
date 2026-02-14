@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="totals1 totals">
+            <div class="amountdetails">
+                Total Profit:
+                <span id="tp"> 
+                </span>
+            </div>
+            <div class="amountdetails">Total Expense:
+                <span id="te"> 
+                </span>
+            </div>
+        </div>
+        <div class="totals2 totals">
+            <div class="amountdetails">Total Loss:
+                <span id="tl"> 
+                </span>
+            </div>
+            <div class="amountdetails">Total Income:
+                <span id="ti"> 
+                </span>
+            </div>
+            </div>
+
+        <form onsubmit="return false">
+            <label for="pn">
+                <div class="title">Enter the Product name</div>
+                <div>
+                    <input type="text" placeholder="Enter the Product name" id="pn">
+                </div>
+            </label>
+            <label for="a">
+                <div class="title">Enter Amount</div>
+                <div>
+                    <input type="number" placeholder="Enter the Amount" id="a">
+                </div>
+            </label>
+            <div class="btndiv">
+                <button onclick="sale('green')">Sale</button>
+                <button onclick="buy('red')">Buy</button>
+            </div>
+        </form>
+        <table>
+            <thead>
+                <tr class="tr1">
+                    <th class="th1">Item Name</th>
+                    <th class="th2">Amount</th>
+                    <th class="th3"></th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
