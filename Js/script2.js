@@ -34,7 +34,7 @@ function sale() {
     
     let totalloss = Number(document.getElementById('tl').innerHTML)
     if(document.getElementById('tl').innerHTML == ''){
-        document.getElementById('tl') = document.getElementById('tl').innerHTML - Number(totalelement.innerHTML)
+        document.getElementById('tl') = totalloss - Number(totalelement.innerHTML)
     }
 }
 
@@ -99,10 +99,9 @@ function get(i) {
             document.getElementById('tl').innerHTML = profitloss
         }
     }
-    saleatdel()
 
 }
 
-function saleatdel() {
+// function saleatdel() {
 
-}
+// }
