@@ -186,18 +186,30 @@ tbody td button {
 
 button.green {
     background-color: #22c55e;
+        color: #fff;
+
 }
 
 button.green:hover {
+        color: #fff;
     background-color: #16a34a;
     transform: scale(1.05);
 }
 
 button.red {
     background-color: #ef4444;
+    color: #fff;
 }
 
 button.red:hover {
     background-color: #dc2626;
+    color: #fff;
     transform: scale(1.05);
+}
+
+.green {
+    color: #22c55e;
+}
+.red {
+    color: #ef4444;
 }

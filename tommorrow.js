@@ -26,6 +26,7 @@ function sale(color) {
                 del.push(`del2(${i}, ${i})`)
             }
             document.getElementById('tbody').innerHTML += `<tr>
+                        <td>${i+1}</td>
                         <td class='td1'>${productnames[i]}</td>
                         <td class='${colorr[i]}'>${amounts[i]}</td>
                         <td><button class='${colorr[i]}' onClick='${del[i]}'>Delete</button></td>
@@ -34,6 +35,7 @@ function sale(color) {
     }
     let ti = Number(document.getElementById('ti').innerHTML) || 0
     document.getElementById('ti').innerText = ti + amount
+
     // let ti = Number("") || 0  // 0
     // let ti = Number(null) || 0 // 0
     calc()
@@ -58,7 +60,8 @@ function del1(ii, i2) {
         } else {
             del.push(`del2(${i}, ${i})`)
         }
-        document.getElementById('tbody').innerHTML += `<tr>
+        document.getElementById('tbody').innerHTML += `<tr>                <td>${i+1}</td>
+
                         <td class='td1'>${productnames[i]}</td>
                         <td class='${colorr[i]}'>${amounts[i]}</td>
                         <td><button class='${colorr[i]}' onClick='${del[i]}'>Delete</button></td>
@@ -71,7 +74,7 @@ function del1(ii, i2) {
 function buy(color2) {
     let productname = document.getElementById('pn').value;
     let amount = Number(document.getElementById('a').value);
-    
+
     if (!productname || !amount) {
         alert("Enter product name and amount");
         return;
@@ -88,6 +91,7 @@ function buy(color2) {
             } else {
                 del.push(`del2(${i}, ${i})`)
             } document.getElementById('tbody').innerHTML += `<tr>
+                            <td>${i+1}</td>
                         <td class='td1'>${productnames[i]}</td>
                         <td class='${colorr[i]}'>${amounts[i]}</td>
                         <td><button class='${colorr[i]}' onClick='${del[i]}'>Delete</button></td>
@@ -96,6 +100,7 @@ function buy(color2) {
         }
         let te = Number(document.getElementById('te').innerHTML) || 0
         document.getElementById('te').innerHTML = te + amount
+
         calc()
     }
 }
@@ -119,6 +124,7 @@ function del2(iii, i3) {
             del.push(`del2(${i}, ${i})`)
         }
         document.getElementById('tbody').innerHTML += `<tr>
+                        <td>${i+1}</td>
                         <td class='td1'>${productnames[i]}</td>
                         <td class='${colorr[i]}'>${amounts[i]}</td>
                         <td><button class='${colorr[i]}' onClick='${del[i]}'>Delete</button></td>
@@ -131,12 +137,14 @@ function calc() {
     let ti = Number(document.getElementById('ti').innerText) || 0
     let te = Number(document.getElementById('te').innerText) || 0
     let ans = ti - te
+    document.getElementById('te').innerHTML = te + 0 || 0
+    document.getElementById('ti').innerHTML = 0 + ti || 0
     if (ans >= 0) {
         document.getElementById('tp').innerText = ans
         document.getElementById('tl').innerHTML = 0;
     } else {
-        // ans = ans.toString()
-        // ans = ans.slice(1)
+        ans = ans.toString()
+        ans = ans.slice(1)
         document.getElementById('tl').innerText = ans
         document.getElementById('tp').innerText = 0
     }

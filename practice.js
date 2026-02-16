@@ -98,20 +98,22 @@ function totals() {
             te += itemList[i].amount
         }
     }
-    document.getElementById('te').innerHTML = te
-    document.getElementById('ti').innerText = ti
+
+    document.getElementById('te').innerHTML = te || 0
+    document.getElementById('ti').innerText = ti || 0
 
     let tp = document.getElementById('tp').innerText
     let tl = document.getElementById('tl').innerText
 
     let tp_tl = ti - te
 
-    document.getElementById('tl').innerText = 0
     let zero = 0
     if(tp_tl >= 0){
-        document.getElementById('tp').innerText = 0 + tp_tl
+        document.getElementById('tl').innerText = 0
+        document.getElementById('tp').innerText = tp_tl
     }else{
+        document.getElementById('tp').innerText = 0
         document.getElementById('tl').innerText = document.getElementById('tl').innerText.slice(1)
-        document.getElementById('tl').innerText = 0 + tp_tl
+        document.getElementById('tl').innerText = tp_tl
     }
 }
